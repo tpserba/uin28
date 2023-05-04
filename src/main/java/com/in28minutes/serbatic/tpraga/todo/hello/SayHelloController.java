@@ -18,4 +18,16 @@ public class SayHelloController {
     public String sayHello(){
         return "Hello world!";
     }
+
+    @RequestMapping("hello-jsp")
+    public String sayHelloJSP(){
+        /* Spring mvc uses View resolver, which is configured in application.properties (prefix and suffix)
+        to return the name of the JSP.
+        As a note, Spring mvc knows part of the path already, that's why we only put path from
+        WEB-INF.
+        */
+        return "hello";
+    }
+
+
 }
