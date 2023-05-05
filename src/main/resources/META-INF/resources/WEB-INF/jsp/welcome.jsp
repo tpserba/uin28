@@ -3,7 +3,7 @@
 		<title>Login page</title>
 	</head>
 	<body>
-		Pleas fill in the fields:
+		Welcome to this site, ${name}
 
 		<form method="post">
 		Name: <input type="text" name="name">

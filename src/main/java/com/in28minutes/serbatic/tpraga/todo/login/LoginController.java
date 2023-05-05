@@ -5,21 +5,24 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class LoginController {
 
     Logger logger = LoggerFactory.getLogger(getClass());
-    @RequestMapping("login")
-    public String login(@RequestParam String name,
-    ModelMap model){
-        model.put("name", name);
-        /*
-        logger.debug("Request param is {}", name);
-        logger.info("Info Request param is {}", name);
-        logger.warn("Warn Request param is {}", name);
-         */
+    @RequestMapping(value = "login", method = RequestMethod.GET)
+    public String login(){
         return "login";
+    }
+    @RequestMapping(value = "login", method = RequestMethod.POST)
+    public String welcome(@RequestParam String name
+                          ,@RequestParam String password,
+                          ModelMap model
+                          ){
+        model.put("name", name);
+        model.put("password", password);
+        return "welcome";
     }
 }
