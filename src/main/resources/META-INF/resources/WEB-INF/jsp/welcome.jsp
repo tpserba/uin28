@@ -4,11 +4,6 @@
 	</head>
 	<body>
 		Welcome to this site, ${name}
-
-		<form method="post">
-		Name: <input type="text" name="name">
-		Password: <input type="password" name="password">
-		<input type="submit">
-		</form>
+        <div><a href="list-todos">Manage</a> your todos</div>
 	</body>
 </html>
