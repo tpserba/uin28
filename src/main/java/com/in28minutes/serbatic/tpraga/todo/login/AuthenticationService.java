@@ -1,4 +1,4 @@
-package com.in28minutes.serbatic.tpraga.todo;
+package com.in28minutes.serbatic.tpraga.todo.login;
 
 import org.springframework.stereotype.Service;
 
