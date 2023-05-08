@@ -1,11 +1,14 @@
 package com.in28minutes.serbatic.tpraga.todo;
 
+import jakarta.validation.constraints.Size;
+
 import java.time.LocalDate;
 
 public class Todo {
 
     private int id;
     private String username;
+    @Size(min=2, message="Enter at least 2 char")
     private String description;
     private LocalDate targetDate;
     private boolean done;
