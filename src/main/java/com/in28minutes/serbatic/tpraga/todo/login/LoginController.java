@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
 @Controller
+// Puts name attribute in session
 @SessionAttributes("name")
 public class LoginController {
     private AuthenticationService authenticationService;
